@@ -22,7 +22,8 @@ RUN curl -O -L https://raw.githubusercontent.com/github/rest-api-description/a2f
 # - "server-statistics-packages.yaml" -> "#/components/schemas/server-statistics-packages"
 
 RUN sed -i 's/server-statistics-actions.yaml/#\/components\/schemas\/server-statistics-actions/g' ghec.2022-11-28.json \
-    && sed -i 's/server-statistics-packages.yaml/#\/components\/schemas\/server-statistics-packages/g' ghec.2022-11-28.json
+    && sed -i 's/server-statistics-packages.yaml/#\/components\/schemas\/server-statistics-packages/g' ghec.2022-11-28.json \
+    && sed -i 's/server-statistics-advisory-db.yaml/#\/components\/schemas\/server-statistics-packages/g' ghec.2022-11-28.json
 
 ENTRYPOINT [ "prism" ]
 
